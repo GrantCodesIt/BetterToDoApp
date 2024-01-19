@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import { SafeAreaView, KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpacity, Keyboard, ScrollView } from 'react-native';
 import AssetExample from './components/AssetExample';
-import mystyle from './styles/styleList';
+import homeStyle from './styles/styleList';
+import NavigationBar from './components/navigationBar';
 
 export default function App() {
   const [task, setTask] = useState();
@@ -18,9 +19,9 @@ export default function App() {
     setTaskItems(itemsCopy);
   }
   return (
-    <SafeAreaView style={mystyle.container}>
+    <SafeAreaView style={homeStyle.container}>
       {/* Task List */}
-      <View style={mystyle.taskContainer}>
+      <View style={homeStyle.taskContainer}>
       {
         taskItems.map((item,index) => {
          return  (
@@ -32,19 +33,20 @@ export default function App() {
       }
       </View>
         {/* Create Task Bar */}
-        <View style={mystyle.createContainer}>
+        <View style={homeStyle.createContainer}>
         <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={{flex:1,flexDirection:'row',}}>
-        <TextInput style={mystyle.textInput} value={task} onChangeText={text => setTask(text)}/>
+        <TextInput style={homeStyle.textInput} value={task} onChangeText={text => setTask(text)}/>
         <TouchableOpacity onPress={() => handleTask()}>
-          <View style={mystyle.addButton}>
+          <View style={homeStyle.addButton}>
           <Text> + </Text>
           </View>
         </TouchableOpacity>
         </KeyboardAvoidingView>
         </View>
         {/*End of Create Task Bar */}
-
+        {/*Navigation*/}
+        <NavigationBar/>
     </SafeAreaView>
   );
 }
