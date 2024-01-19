@@ -1,20 +1,35 @@
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet } from "react-native";
 
-export default function AssetExample(props) {
-
+export default function NavigationBar() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.paragraph}>
-      </Text>
+    <View style={styles.containerBar}>
+      <View style={styles.containerHome}>
+        <Text style={styles.text}>Home</Text>
+      </View>
+      <View style={styles.containerMap}>
+        <Text style={styles.text}>Map</Text>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#505bf2',
+  containerBar: {
+    backgroundColor: "#ffffff",
+    flexDirection:'row',
   },
-  paragraph: {
+  containerHome: {
+    backgroundColor: "#000000",
+    flex:1,
+    alignItems:'center',
+  },
+  containerMap: {
+    backgroundColor: "#000000",
+    flex:1,
+    alignItems:'center',
+  },
+  text: {
     fontSize: 14,
+    color: "green",
   },
 });
