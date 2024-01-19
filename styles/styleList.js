@@ -11,16 +11,19 @@ export default StyleSheet.create({
     backgroundColor: '#E8EAED',
   },
   taskContainer:{
-    flex:1,
+    flex:4,
     backgroundColor: 'green',
     borderRadius: 30,
     margin:10,
+    paddingTop:10,
   },
   createContainer: {
     flex:1,
+    borderRadius: 30,
+    margin:10,
     backgroundColor: 'brown',
     justifyContent: 'center',
-    alignItems: 'flex-end',
+    alignItems: 'flex-start',
     flexDirection: 'row',
   },
   textInput: {
