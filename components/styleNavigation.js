@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   containerBar: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "black",
     flexDirection:'row',
   },
   containerHome: {

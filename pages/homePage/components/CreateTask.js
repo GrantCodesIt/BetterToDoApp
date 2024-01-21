@@ -1,13 +1,13 @@
 import { SafeAreaView, KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpacity, Keyboard, ScrollView } from 'react-native';
 
-export default function App(){
+export default function CreateTask(){
     return (
-        <View style={homeStyle.createContainer}>
+        <View style={styles.createContainer}>
         <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={{flex:1,flexDirection:'row',}}>
-        <TextInput style={homeStyle.textInput} value={task} onChangeText={text => setTask(text)}/>
+        <TextInput style={styles.textInput} value={task} onChangeText={text => setTask(text)}/>
         <TouchableOpacity onPress={() => handleTask()}>
-          <View style={homeStyle.addButton}>
+          <View style={styles.addButton}>
           <Text> + </Text>
           </View>
         </TouchableOpacity>
