@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import { SafeAreaView, KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpacity, Keyboard, ScrollView } from 'react-native';
 import AssetExample from './components/AssetExample';
-import homeStyle from './styles/styleList';
-import NavigationBar from './components/navigationBar';
-
+import homeStyle from '../../styles/styleList';
+import NavigationBar from '../../components/navigationBar';
+import CreateTask from './components/CreateTask';
 export default function App() {
   const [task, setTask] = useState();
   const [taskItems, setTaskItems] = useState([]);
@@ -21,7 +21,7 @@ export default function App() {
   return (
     <SafeAreaView style={homeStyle.container}>
       {/* Task List */}
-      <View style={homeStyle.taskContainer}>
+      <ScrollView style={homeStyle.taskContainer}>
       {
         taskItems.map((item,index) => {
          return  (
@@ -31,19 +31,9 @@ export default function App() {
          )
         })
       }
-      </View>
+      </ScrollView>
         {/* Create Task Bar */}
-        <View style={homeStyle.createContainer}>
-        <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={{flex:1,flexDirection:'row',}}>
-        <TextInput style={homeStyle.textInput} value={task} onChangeText={text => setTask(text)}/>
-        <TouchableOpacity onPress={() => handleTask()}>
-          <View style={homeStyle.addButton}>
-          <Text> + </Text>
-          </View>
-        </TouchableOpacity>
-        </KeyboardAvoidingView>
-        </View>
+        <CreateTask/>
         {/*End of Create Task Bar */}
         {/*Navigation*/}
         <NavigationBar/>

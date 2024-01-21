@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems:'flex-start',
     textAlign:'center',
-
+    flex:1
   },
   paragraph: {
     fontSize: 14,

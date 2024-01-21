@@ -8,7 +8,7 @@ export default StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#E8EAED',
+    backgroundColor: '#white',
   },
   taskContainer:{
     flex:4,
