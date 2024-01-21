@@ -66,17 +66,16 @@ const styles = StyleSheet.create({
   taskContainer:{
     flex:4,
     backgroundColor: 'green',
-    borderRadius: 30,
-    margin:10,
+    padding:10,
     paddingTop:10,
   },
   createContainer: {
     flex:1,
-    borderRadius: 30,
-    margin:10,
+    left:0,
+    padding:20,
     backgroundColor: 'brown',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     flexDirection: 'row',
   },
   textInput: {

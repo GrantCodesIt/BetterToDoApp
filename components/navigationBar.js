@@ -18,6 +18,9 @@ const styles = StyleSheet.create({
   containerBar: {
     backgroundColor: "black",
     flexDirection:'row',
+    position:"absolute",
+    left:0,
+    bottom:0,
   },
   containerHome: {
     backgroundColor: "#000000",
