@@ -1,14 +1,19 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
 // import styles from "./styleNavigation";
 
 export default function NavigationBar() {
   return (
     <View style={styles.containerBar}>
       <View style={styles.containerHome}>
-        <Text style={styles.text}>Home</Text>
+        <TouchableOpacity onPress={() => handleTask()}>
+          <Text style={styles.text}>Home</Text>
+        </TouchableOpacity>
       </View>
+
       <View style={styles.containerMap}>
-        <Text style={styles.text}>Map</Text>
+        <TouchableOpacity onPress={() => handleTask()}>
+          <Text style={styles.text}>Map</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -17,20 +22,20 @@ export default function NavigationBar() {
 const styles = StyleSheet.create({
   containerBar: {
     backgroundColor: "black",
-    flexDirection:'row',
-    position:"absolute",
-    left:0,
-    bottom:0,
+    flexDirection: "row",
+    position: "absolute",
+    left: 0,
+    bottom: 0,
   },
   containerHome: {
     backgroundColor: "#000000",
-    flex:1,
-    alignItems:'center',
+    flex: 1,
+    alignItems: "center",
   },
   containerMap: {
     backgroundColor: "#000000",
-    flex:1,
-    alignItems:'center',
+    flex: 1,
+    alignItems: "center",
   },
   text: {
     fontSize: 14,
