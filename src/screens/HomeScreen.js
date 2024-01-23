@@ -4,10 +4,10 @@ import { SafeAreaView, KeyboardAvoidingView, StyleSheet, Text, View, TextInput, 
 import AssetExample from '../components/AssetExample';
 
 import NavigationBar from '../navigation/navigationBar';
-import { NavigationContainer } from '../../node_modules/@react-navigation/native';
+import { NavigationContainer, useNavigation } from '../../node_modules/@react-navigation/native';
 //import { createStackNavigator } from '../../node_modules/@react-navigation/stack';
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
     const [task, setTask] = useState();
     const [taskItems, setTaskItems] = useState([]);
     const handleTask = () => {

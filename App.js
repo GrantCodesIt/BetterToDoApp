@@ -4,14 +4,13 @@ import { SafeAreaView, KeyboardAvoidingView, StyleSheet, Text, View, TextInput, 
 import AssetExample from './src/components/AssetExample';
 import NavigationBar from './src/navigation/navigationBar';
 import HomeScreen from './src/screens/HomeScreen';
-// import { NavigationContainer } from './node_modules/@react-navigation/native';
-// import { createStackNavigator } from './node_modules/@react-navigation/stack';
+import { NavigationContainer } from './node_modules/@react-navigation/native';
+ import { createStackNavigator } from './node_modules/@react-navigation/stack';
+import Auth from './src/navigation/Auth';
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <HomeScreen/>
-    </SafeAreaView>
+    <Auth/>
   );
 }
 
